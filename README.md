@@ -1,5 +1,15 @@
 # Next-BFF-boilerplate
 
+# Screenshot
+
+Example URL: http://localhost:3000/?userId=7
+
+(With query parameters)
+
+![ss](./screenshot.png)
+
+Request API is https://jsonplaceholder.typicode.com/posts?userId=7
+
 # Getting Started
 
 ```bash
