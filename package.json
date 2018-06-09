@@ -1,0 +1,68 @@
+{
+  "name": "next-bff-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+    "test": "jest",
+    "lint": "eslint ./components/**/* ./pages/**/*",
+    "flow": "flow check"
+  },
+  "dependencies": {
+    "isomorphic-unfetch": "^2.0.0",
+    "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "next": "^6.0.2",
+    "next-redux-wrapper": "^2.0.0-beta.6",
+    "next-routes": "^1.4.1",
+    "query-string": "^6.1.0",
+    "react": "16.3.2",
+    "react-dom": "16.3.2",
+    "react-redux": "^5.0.7",
+    "recompose": "^0.27.1",
+    "redux": "^4.0.0",
+    "redux-saga": "^0.16.0",
+    "semantic-ui-react": "^0.80.0",
+    "styled-jsx": "^2.2.6"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.0.0-beta.48",
+    "@babel/preset-react": "^7.0.0-beta.48",
+    "babel-eslint": "^8.2.3",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-flowtype": "^2.46.3",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jest": "^21.15.2",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.8.2",
+    "eslint-plugin-security": "^1.4.0",
+    "flow-bin": "^0.72.0",
+    "husky": "^1.0.0-rc.4",
+    "jest": "^23.0.0",
+    "lint-staged": "^7.1.0",
+    "prettier": "^1.12.1",
+    "redux-devtools-extension": "^2.13.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "flow check && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
